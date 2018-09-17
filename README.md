@@ -57,8 +57,12 @@ $ php artisan vendor:publish --tag=config --provider="ChristofferOK\LaravelEmoji
 ``` php
 LaravelEmojiOne::toShort($str); // - native unicode -> shortnames
 LaravelEmojiOne::shortnameToImage($str); // - shortname -> images
+LaravelEmojiOne::shortnameToUnicode($str); // - shortname -> native unicode
 LaravelEmojiOne::unicodeToImage($str); // - native unicode -> images
 LaravelEmojiOne::toImage($str); // - native unicode + shortnames -> images (mixed input)
+LaravelEmojiOne::unifyUnicode($str); // - non-standard unicode -> short name -> standardized unicode
+LaravelEmojiOne::shortnameToAscii($str); // - shortname -> ascii (e.g. :wink: --> ;^)
+LaravelEmojiOne::asciiToShortname($str); // - ascii -> shortname :) --> :slight_smile:
 ```
 
 Blade (equivalent to `LaravelEmojiOne::toImage($str)`): 
