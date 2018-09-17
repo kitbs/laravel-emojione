@@ -41,10 +41,30 @@ class LaravelEmojiOne
     {
         return $this->client->shortnameToImage($str);
     }
+    
+    public function shortnameToUnicode($str)
+    {
+        return $this->client->shortnameToUnicode($str);
+    }
 
     public function unicodeToImage($str)
     {
         return $this->client->unicodeToImage($str);
+    }
+
+    public function unifyUnicode($str)
+    {
+        return $this->client->unifyUnicode($str);
+    }
+
+    public function shortnameToAscii($str)
+    {
+        return $this->client->shortnameToAscii($str);
+    }
+
+    public function asciiToShortname($str)
+    {
+        return $this->client->asciiToShortname($str);
     }
 
     public function getClient()
